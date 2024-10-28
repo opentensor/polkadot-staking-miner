@@ -31,7 +31,7 @@ pub type Header =
 /// The header type. We re-export it here, but we can easily get it from block as well.
 pub type Hash = subxt::utils::H256;
 /// Balance type
-pub type Balance = u128;
+pub type Balance = u64;
 pub use subxt::ext::sp_runtime::traits::{Block as BlockT, Header as HeaderT};
 
 /// Default URI to connect to.

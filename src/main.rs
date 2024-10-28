@@ -104,6 +104,11 @@ macro_rules! any_runtime {
 				use $crate::static_types::westend::MinerConfig;
 				$($code)*
 			},
+			$crate::opt::Chain::Subtensor => {
+				#[allow(unused)]
+				use $crate::static_types::polkadot::MinerConfig;
+				$($code)*
+			},
 		}
 	};
 }

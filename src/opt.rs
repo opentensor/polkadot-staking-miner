@@ -51,6 +51,7 @@ pub enum Chain {
 	Westend,
 	Kusama,
 	Polkadot,
+	Subtensor,
 }
 
 impl fmt::Display for Chain {
@@ -59,6 +60,7 @@ impl fmt::Display for Chain {
 			Self::Polkadot => "polkadot",
 			Self::Kusama => "kusama",
 			Self::Westend => "westend",
+			Self::Subtensor => "node-subtensor",
 		};
 		write!(f, "{}", chain)
 	}
@@ -72,6 +74,7 @@ impl std::str::FromStr for Chain {
 			"polkadot" => Ok(Self::Polkadot),
 			"kusama" => Ok(Self::Kusama),
 			"westend" => Ok(Self::Westend),
+			"node-subtensor" => Ok(Self::Subtensor),
 			chain => Err(Error::InvalidChain(chain.to_string())),
 		}
 	}
